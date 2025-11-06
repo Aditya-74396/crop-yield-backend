@@ -15,17 +15,17 @@ Data: data/crop_yield.csv
 Model saved at: models/crop_yield_model.pkl
 
 ## Folder Structure
-crop-yield-backend/
-│
-├── data/
-│   └── crop_yield.csv          # Dataset
-├── models/
-│   └── crop_yield_model.pkl    # Trained ML model
-├── src/
-│   └── app.py                  # Flask API
-├── train_model.py              # Script to train the model
-├── requirements.txt            # Python dependencies
-└─  README.md
+data/ → Contains the dataset (crop_yield.csv) used to train the model.
+
+models/ → Stores the trained model (crop_yield_model.pkl).
+
+src/ → Contains the backend code (app.py) for the API.
+
+train_model.py → Script to train the crop yield prediction model.
+
+requirements.txt → Lists all Python dependencies.
+
+README.md → Project description, instructions, and API usage.
 
 ##  Setup & Run Backend
 
@@ -42,9 +42,21 @@ crop-yield-backend/
    # macOS/Linux
    source venv/bin/activate
 
-3. Open terminal inside the folder and run:
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   
+4.  Train the model (optional if the model is already provided in models/)
+  ```bash
+  python train_model.py
+```
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
+5. Run the Flask server
+   ```bash
+   python src/app.py
+   
+6.API will be running at
+```cpp
+https://127.0.0.1:5000/
+
+
