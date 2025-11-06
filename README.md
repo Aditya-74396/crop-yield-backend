@@ -55,7 +55,7 @@ README.md → Project description, instructions, and API usage.
    ```bash
    python src/app.py
    
-6.API will be running at
+6. API will be running at
 ```cpp
 https://127.0.0.1:5000/
 
